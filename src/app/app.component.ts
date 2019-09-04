@@ -3,8 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['../scss/app.component.scss']
 })
 export class AppComponent {
-  title = 'Projekt-Frontend';
+  
 }
+

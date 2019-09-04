@@ -1,0 +1,19 @@
+<div class="list-item-container">
+    <div class="list-item-element" *ngFor="let item of sortedItems()">
+        <div class="list-item-id">
+                {{item.data.Id}}
+        </div>
+        <div class="list-item-device">
+                {{item.data.deviceId}}
+        </div>
+        <div class="list-item-timestamp">
+                {{item.data.timestamp}}
+        </div>
+        <div class="list-item-temperature">
+                {{item.data.data.temperature}}
+        </div>
+        <div class="list-item-humidity">
+                {{item.data.data.humidity}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+
+.card-grid{
+    display: inline-block;
+    margin: 20px;
+}
+
+.card-condition{
+    width: 100%;
+}
+
+.heading{
+    background-color: darkcyan;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,36 @@
+@import './variables.scss';
+
+.list-item-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    min-width: 300px;
+    overflow: visible;
+    grid-gap: 10px;
+}
+
+.list-item-element{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 50px;
+    grid-column: 1 / -1;
+    background: $dark-cyan;
+    color: white;
+}
+
+.list-item{
+    &-id{
+        grid-column: 1 / 1;
+    }
+    &-device{
+        grid-column: 2 / 2;
+    }
+    &-timestamp{
+        grid-column: 3 / 3;
+    }
+    &-temperature{
+        grid-column: 4 / 4;
+    }
+    &-humidity{
+        grid-column: 5 / 5;
+    }
+}

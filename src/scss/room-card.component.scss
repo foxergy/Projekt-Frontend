@@ -1,0 +1,81 @@
+@import './variables.scss';
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px 200px 40px;
+    min-width: 300px;
+    overflow: visible;
+    grid-gap: 10px;
+}
+
+.card-header{
+    box-shadow: 2px 2px 20px 0px gray;
+    background-color:$dark-cyan;
+    color: white;
+    grid-column: 1 / 11;
+    font-size: 3vh;
+    padding: 5px;
+        /*
+    or:
+    grid-column-start: 1;
+    grid-column-end: 3;
+    or:
+    grid-column: 1 / span 2;
+    or:
+    grid-column: 1 / 3;
+    */
+}
+
+.card-icon{
+    box-shadow: 2px 2px 20px 0px gray;
+    grid-column: 11 / -1;
+    &-good{
+        background-color: green;
+    }
+    &-ok{
+        background-color: yellow;
+        animation: blink 2s linear infinite;
+    }
+    &-bad{
+        background-color: red;
+        animation: blink 1s linear infinite;
+    }
+}
+
+@keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+}
+
+.card-icon-indicator{
+    grid-column: 1 / 4;
+}
+
+.card-value-indicator{
+    grid-column: 4 / -1;
+}
+
+.card-content{
+    box-shadow: 2px 2px 20px 0px gray;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px 100px;
+    grid-gap: 3px;
+    background: $light-cyan;
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-size: 4.5vh;
+}
+
+.card-footer{
+    box-shadow: 2px 2px 20px 0px gray;
+    background-color: #177272;
+    color: white;
+    padding: 5px;
+    grid-column: 1 / -1;
+    font-size: 2vh;
+}

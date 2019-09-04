@@ -1,0 +1,10 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="grid-container">
+    <header-bar [title]="'Sensor-Overview'"></header-bar>
+    <div class="content" *ngIf="items !== null; else loading">
+      <div class = "card-grid" *ngFor="let groupedArray of groupByDeviceID()">
+          <room-card  [awsItem]="getLastItem(groupedArray)"></room-card>
+      </div>
+    </div>
+    <ng-template #loading> loading ...</ng-template>
+</div>

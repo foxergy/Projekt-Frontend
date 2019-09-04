@@ -1,0 +1,32 @@
+@import './variables.scss';
+
+.header-grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 80px;
+    grid-gap: 3px;
+}
+
+.header{
+    background-color:$dark-cyan;
+}
+
+.first-icon{
+    grid-column: 1 / 2;
+    &:hover{
+        background-color: $light-cyan;
+    }
+}
+
+.second-icon{
+    grid-column: 2 / 3;
+    &:hover{
+        background-color: $light-cyan;
+    }
+}
+
+.title{
+    grid-column: 5/8;
+    color:white;
+    font-size: 4vh;
+}
