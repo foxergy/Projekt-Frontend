@@ -12,4 +12,9 @@ export class RoomCardComponent{
     @Input() awsItem: AwsItem= null;
     
     constructor(){}
+
+    getHumidity(){
+        const humidity = this.awsItem.data.data.humidity;
+        return +humidity;
+    }
 }
